@@ -16,13 +16,13 @@
   <body>
     <header>
       <nav
-        class="w-11/12 mx-auto py-4 flex justify-between items-center border-b-2 gap-5"
+        class="w-11/12 mx-auto py-4 flex justify-between items-center border-b gap-5"
       >
         <div class="logo w-[100px]">
           <img src="img/Logo.png" alt="" />
         </div>
 
-        <div class="search">
+        <div class="search w-40 md:w-auto">
           <label class="input input-bordered flex items-center gap-2">
             <input type="text" class="grow" placeholder="Search" />
             <svg
@@ -40,9 +40,21 @@
           </label>
         </div>
         <div class="sort">
-          <button class="btn bg-red-500 text-white px-5">Blog</button>
+          <button class="btn bg-red-500 text-white md:px-5">Blog</button>
         </div>
       </nav>
     </header>
+    <nav
+      id="categories"
+      class="flex justify-center items-center gap-5 py-3"
+    ></nav>
+
+    <main>
+      <section
+        id="videos"
+        class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10"
+      ></section>
+    </main>
+    <script src="index,.js"></script>
   </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <title>PH-Tube</title>
+    <link rel="stylesheet" href="style.css" />
     <!-- daisyui -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.11/dist/full.min.css"
@@ -24,7 +25,12 @@
 
         <div class="search w-40 md:w-auto">
           <label class="input input-bordered flex items-center gap-2">
-            <input type="text" class="grow" placeholder="Search" />
+            <input
+              id="search-input"
+              type="text"
+              class="grow"
+              placeholder="Search"
+            />
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -55,6 +61,28 @@
         class="w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 py-10"
       ></section>
     </main>
+
+    <!-- modal -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button
+      id="showModalData"
+      class="btn hidden"
+      onclick="coustomModal.showModal()"
+    >
+      open modal
+    </button>
+    <dialog id="coustomModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- modal -->
     <script src="index,.js"></script>
   </body>
 </html>
